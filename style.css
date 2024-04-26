@@ -1,0 +1,113 @@
+:root {
+    --base-gap: 16px;
+    --section-column: auto auto auto auto auto;
+
+    --color: white;
+    --color-accent: blue;
+    --color-text: #7e7e7e;
+    --color-text-secondary: white;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --section-column: auto;
+    }
+}
+
+body {
+    margin: 0;
+    color: var(--color-text);
+    background: var(--color);
+}
+
+header {
+    background: var(--color-accent);
+    color: var(--color-text-secondary);
+    padding: var(--base-gap);
+    display: flex;
+    justify-content: space-between;
+}
+
+.container {
+    padding: var(--base-gap);
+}
+
+.images {
+    display: grid;
+    grid-template-columns: var(--section-column);
+    gap: var(--base-gap);
+    margin-bottom: var(--base-gap);
+    
+}
+
+.images .image {
+    padding: 16px;
+    border: 1px solid #696969;
+    border-radius: 4px;
+}
+
+.accordion {
+    border: 1px solid #696969;
+    border-radius: 4px;
+}
+
+.acc-header {
+    padding: 16px;
+    background: #e2e2e2;
+}
+
+.acc-body {
+    padding: 16px;
+}
+
+.acc-header {
+    display: flex;
+    justify-content: space-between;
+}
+.acc-controls {
+    position: relative;
+}
+.acc-control-item {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    line-height: 16px;
+}
+
+.images img {
+    width: 100%;
+    display: block;
+}
+
+.cursor {
+    cursor: pointer;
+}
+.menu-container {
+    position: relative;
+}
+
+.gone {
+    display: none;
+}
+
+.menu {
+    position: absolute;
+    right:0;
+    top: 8px;
+    background: white;
+    color: #7e7e7e;
+    border: 1px solid #696969;
+    border-radius: 4px;
+    width: max-content;
+    z-index: 1;
+}
+
+.menu div {
+    padding: 12px 32px;
+    border-bottom: 1px solid #696969;
+}
+
+.menu div:last-child {
+    border-bottom: none;
+}
